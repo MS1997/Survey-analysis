@@ -12,6 +12,8 @@ wt <- d$v005/1000000 #defining variable for national sample weights
 
 #defining the survey design
 sd <- svydesign(ids = d$v021, strata = d$v023, weights = wt, data = d)
+#adjustment for primary sampling units with single observation
+options(survey.lonely.psu="adjust")
 
 #defining variable for stunting i.e. less height for age, indicator of malnutrition
 #A child is labeled as stunted if his HAZ or height for age z score is less than -2SD (WHO)
