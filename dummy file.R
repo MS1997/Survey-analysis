@@ -157,5 +157,3 @@ sd1$variables <- mutate(sd1$variables,place_d)
 sd1 <- update(sd1, place_d=as.factor(place_d))
 tab_place_d<- svymean(~place_d,sd1,na.rm=TRUE)
 tab_place_d_byeach<- svymean(~m15,sd1,na.rm=TRUE)
-
-t
